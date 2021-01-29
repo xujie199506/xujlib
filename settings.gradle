@@ -1,0 +1,3 @@
+include ':xujlibrary'
+include ':app'
+rootProject.name = "BaseMoudle"
