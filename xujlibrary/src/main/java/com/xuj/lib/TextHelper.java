@@ -3,7 +3,7 @@ package com.xuj.lib;
 import java.nio.ByteBuffer;
 import java.nio.ByteOrder;
 
-public class TextTools {
+public class TextHelper {
 
 
 	/**
