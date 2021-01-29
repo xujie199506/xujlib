@@ -20,6 +20,6 @@ allprojects {
 
 ```groovy
 dependencies {
-    implementation 'com.github.xujie199506:xujlib:1.0.1'
+    implementation 'com.github.xujie199506:xujlib:Tag'
 }
 ```
