@@ -1,5 +1,9 @@
 # 个人工作中经常使用的工具类
 
+```
+[![](https://jitpack.io/v/xujie199506/xujlib.svg)](https://jitpack.io/#xujie199506/xujlib)
+```
+
 ## 如何接入
 
 以下两个步骤：
