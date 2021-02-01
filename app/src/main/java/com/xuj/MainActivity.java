@@ -13,26 +13,30 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
+    String tableName = "kventity";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        ToastUtil.showShort(this,"");
+        ToastUtil.showShort(this, "");
 
 
         DataAnalyzer<KvEntity> da = new DataAnalyzer<>(this, Sqlite.DB_COMMON);
 
 
-        KvEntity kvEntity = new KvEntity("1", "22212");
-        boolean insert = da.insert(Sqlite.DB_COMMON, "kventity", kvEntity);
+        KvEntity kvEntity = new KvEntity("key", "value");
+        boolean insert = da.insert(Sqlite.DB_COMMON, tableName, kvEntity);
 
-        Log.e("TAG", "onCreate: "+insert );
+        Log.e("TAG", "onCreate: " + insert);
 
-        List<KvEntity> kventity = da.query("kventity", " * ", "", null, null, KvEntity.class);
+        List<KvEntity> kventity = da.query(tableName, " * ", "", null, null, KvEntity.class);
         for (KvEntity entity : kventity) {
-            Log.e("TAG", "onCreate: "+ entity+toString());
+            Log.e("TAG", "onCreate: " + entity + toString());
         }
 
+        //执行sql语句
+        da.getDataHelper().exeSql("detele from " + tableName);
 
     }
 }
