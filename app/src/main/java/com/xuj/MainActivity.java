@@ -32,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
 
         List<KvEntity> kventity = da.query(tableName, " * ", "", null, null, KvEntity.class);
         for (KvEntity entity : kventity) {
-            Log.e("TAG", "onCreate: " + entity + toString());
+            Log.e("TAG", "onCreate: " + entity.toString());
         }
 
         //执行sql语句

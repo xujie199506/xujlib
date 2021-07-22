@@ -126,6 +126,12 @@ public class TextHelper {
 		return sb.toString();
 	}
 
+
+	public static byte[] intToByte2LH(int i) {
+		byte[] bytes = intToByte2(i);
+		byte[] re=new byte[]{bytes[1],bytes[0]};
+		return re;
+	}
 	/**
 	 *hexstr转字节数组
 	 */
